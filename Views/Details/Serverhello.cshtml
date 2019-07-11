@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h3><strong>Server Hello</strong></h3>
+
+<ul>
+    <li>ServerHello message. Containing the chosen protocol version, a random number, CipherSuite and compression method from the choices offered by the client. To confirm or allow resumed handshakes the server may send a session ID. The chosen protocol version should be the highest that both the client and server support. For example, if the client supports TLS version 1.1 and the server supports version 1.2, version 1.1 should be selected; version 1.2 should not be selected.</li>
+    <li>Server's Certificate message. Depending on the selected cipher suite, this may be omitted by the server.</li>
+    <li>ServerKeyExchange message (depending on the selected cipher suite, this may be omitted by the server). This message is sent for all DHE and DH_anon ciphersuites.</li>
+    <li>ServerHelloDone message. Indicating it is done with handshake negotiation.</li>
+</ul>
