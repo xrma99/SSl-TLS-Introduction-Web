@@ -1,0 +1,32 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "attack";
+}
+
+<h3 style="text-align:center"><strong>Transport Layer Security Attack</strong></h3>
+
+<br/>
+<h4><strong>Renegotiation attack</strong></h4>
+<p>
+    A vulnerability of the renegotiation procedure was discovered in <strong>August 2009</strong> that can lead to plaintext injection attacks against SSL 3.0 and all current versions of TLS.
+</p>
+<p>
+    For example, it allows an attacker who can hijack an https connection to splice their own requests into the beginning of the conversation the client has with the web server. The attacker can't actually decrypt the client–server communication, so it is different from a typical man-in-the-middle attack.
+</p>
+<p>
+    A short-term fix is for web servers to stop allowing renegotiation, which typically will not require other changes unless client certificate authentication is used. To fix the vulnerability, a renegotiation indication extension was proposed for TLS. It will require the client and server to include and verify information about previous handshakes in any renegotiation handshakes. This extension has become a proposed standard and has been assigned the number RFC 5746. The RFC has been implemented by several libraries.
+</p>
+
+<br/>
+<h4><strong>Downgrade attacks: FREAK attack and Logjam attack</strong></h4>
+<i>Main articles: FREAK and Logjam (computer security)</i>
+<p>
+    A protocol downgrade attack (also called a version rollback attack) tricks a web server into negotiating connections with previous versions of TLS (such as SSLv2) that have long since been abandoned as insecure.
+    Previous modifications to the original protocols, like False Start (adopted and enabled by Google Chrome) or Snap Start, reportedly introduced limited TLS protocol downgrade attacks or allowed modifications to the cipher suite list sent by the client to the server. <strong>In doing so, an attacker might succeed in influencing the cipher suite selection in an attempt to downgrade the cipher suite negotiated to use either a weaker symmetric encryption algorithm or a weaker key exchange.</strong> A paper presented at an ACM conference on computer and communications security in 2012 demonstrated that the False Start extension was at risk: in certain circumstances it could allow an attacker to recover the encryption keys offline and to access the encrypted data.
+</p>
+<p>
+    Encryption downgrade attacks can force servers and clients to negotiate a connection using cryptographically weak keys. In 2014, a man-in-the-middle attack called FREAK was discovered affecting the OpenSSL stack, the default Android web browser, and some Safari browsers. The attack involved tricking servers into negotiating a TLS connection using cryptographically weak 512 bit encryption keys.
+    Logjam is a security exploit discovered in May 2015 that exploits the option of using legacy "export-grade" 512-bit Diffie–Hellman groups dating back to the 1990s. It forces susceptible servers to downgrade to cryptographically weak 512-bit Diffie–Hellman groups. An attacker can then deduce the keys the client and server determine using the Diffie–Hellman key exchange.
+</p>

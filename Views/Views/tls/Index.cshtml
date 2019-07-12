@@ -1,0 +1,78 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["title"] = "index";
+}
+
+<h3 style="text-align:center"><strong>Transport Layer Security Comparison</strong></h3>
+
+<br/>
+<h4><strong>TLS 1.0</strong></h4>
+
+<p>
+    TLS 1.0 was first defined in RFC 2246 in January 1999 as an upgrade of <abbr title="Secure Sockets Layer">SSL</abbr> Version 3.0, and written by Christopher Allen and Tim Dierks of Consensus Development. As stated in the RFC, "the differences between this protocol and SSL 3.0 are not dramatic, but they are significant enough to preclude interoperability between TLS 1.0 and SSL 3.0". TLS 1.0 does include a means by which a TLS implementation can downgrade the connection to SSL 3.0, thus weakening security.
+</p>
+    
+<p>
+    The PCI Council suggested that organizations migrate from TLS 1.0 to TLS 1.1 or higher before June 30, 2018. In October 2018, Apple, Google, Microsoft, and Mozilla jointly announced they would deprecate TLS 1.0 and 1.1 in March 2020.
+</p>
+    
+<br/>
+<h4><strong>TLS 1.1</strong></h4>
+
+<p>
+    TLS 1.1 was defined in RFC 4346 in April 2006.It is an update from TLS version 1.0. Significant differences in this version include:
+</p>
+    
+<ul>
+    <li>Added protection against cipher-block chaining (CBC) attacks.</li>   
+    <li>The implicit initialization vector (IV) was replaced with an explicit IV.</li>    
+    <li>Change in handling of padding errors.</li>
+    <li>Support for IANA registration of parameters.</li>
+</ul>
+    
+<br/>
+<h4><strong>TLS 1.2</strong></h4>
+
+<p>
+    TLS 1.2 was defined in RFC 5246 in August 2008. It is based on the earlier TLS 1.1 specification. Major differences include:
+</p>
+    
+<ul>
+    <li>The MD5-SHA-1 combination in the pseudorandom function (PRF) was replaced with SHA-256, with an option to use cipher suite specified PRFs.</li>
+    <li>The MD5-SHA-1 combination in the finished message hash was replaced with SHA-256, with an option to use cipher suite specific hash algorithms. However, the size of the hash in the finished message must still be at least 96 bits.</li>
+    <li>The MD5-SHA-1 combination in the digitally signed element was replaced with a single hash negotiated during handshake, which defaults to SHA-1.</li>
+    <li>Enhancement in the client's and server's ability to specify which hashes and signature algorithms they accept.</li>
+    <li>Expansion of support for authenticated encryption ciphers, used mainly for Galois/Counter Mode (GCM) and CCM mode of Advanced Encryption Standard (AES) encryption.</li>
+    <li>TLS Extensions definition and AES cipher suites were added.</li>
+    <li>All TLS versions were further refined in RFC 6176 in March 2011, removing their backward compatibility with SSL such that TLS sessions never negotiate the use of Secure Sockets Layer (SSL) version 2.0.</li>
+</ul>
+    
+<br/>
+<h4><strong>TLS 1.3</strong></h4>
+
+<p>
+    TLS 1.3 was defined in RFC 8446 in August 2018. It is based on the earlier TLS 1.2 specification. Major differences from TLS 1.2 include:
+</p>
+    
+<ul>
+    <li>Separating key agreement and authentication algorithms from the cipher suites</li>
+    <li>Removing support for weak and lesser-used named elliptic curves</li>    
+    <li>Removing support for MD5 and SHA-224 cryptographic hash functions</li>  
+    <li>Requiring digital signatures even when a previous configuration is used</li>    
+    <li>Integrating HKDF and the semi-ephemeral DH proposal</li>
+    <li>Replacing resumption with PSK and tickets</li>
+    <li>Supporting 1-RTT handshakes and initial support for 0-RTT</li>
+    <li>Mandating perfect forward secrecy, by means of using ephemeral keys during the (EC)DH key agreement</li>
+    <li>Dropping support for many insecure or obsolete features including compression, renegotiation, non-AEAD ciphers, non-PFS key exchange (among which are static RSA and static DH key exchanges), custom DHE groups, EC point format negotiation, Change Cipher Spec protocol, Hello message UNIX time, and the length field AD input to AEAD ciphers</li> 
+    <li>Prohibiting SSL or RC4 negotiation for backwards compatibility</li>
+    <li>Integrating use of session hash</li>
+    <li>Deprecating use of the record layer version number and freezing the number for improved backwards compatibility</li>
+    <li>Moving some security-related algorithm details from an appendix to the specification and relegating ClientKeyShare to an appendix</li>
+    <li>Adding the ChaCha20 stream cipher with the Poly1305 message authentication code</li>
+    <li>Adding the Ed25519 and Ed448 digital signature algorithms</li>
+    <li>Adding the x25519 and x448 key exchange protocols</li>
+    
+</ul>
+    
