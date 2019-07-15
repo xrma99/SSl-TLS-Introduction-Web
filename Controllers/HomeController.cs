@@ -34,6 +34,11 @@ namespace SSLTLSWeb.Controllers
             return View();
         }
 
+        public IActionResult Example()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

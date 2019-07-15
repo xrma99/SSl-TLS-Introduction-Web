@@ -24,6 +24,11 @@ namespace SSLTLSWeb.Controllers
         {
             return View();
         }
+
+        public IActionResult Servercert()
+        {
+            return View();
+        }
         public IActionResult Clientbye()
         {
             return View();
