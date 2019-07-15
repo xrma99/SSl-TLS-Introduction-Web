@@ -1,5 +1,7 @@
-# SSl-TLS-Introduction-Web
+# TLS-Introduction-Web
 
-It's an SSL & TLS protocols introduction website.
+It's a Transport Layer Security (TLS) protocol introduction website.
 
-Building tool is Visual Studio 2019, programming in C# and JS. I use the ASP.net core MVC framework.
+Building tool is Visual Studio 2019 programming in C# and JS. 
+
+The ASP.net core MVC framework is used.
