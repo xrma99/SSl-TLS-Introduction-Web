@@ -7,8 +7,8 @@
 <h3 style="text-align:center"><strong>Algorithms supported</strong></h3>
 
 <style>
-    table{
-        text-align:center;
+    table {
+        text-align: center;
     }
 </style>
 
@@ -89,7 +89,7 @@
         <td>ECDHE-ECDSA(forward secrecy)</td>
         <td>&radic;</td>
         <td>3DES EDE CBC</td>
-        <td>&nbsp;</td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -97,7 +97,7 @@
         <td>PSK</td>
         <td>&radic;</td>
         <td>GOST 28147-89 CNT</td>
-        <td>&nbsp;</td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -105,7 +105,7 @@
         <td>PSK-RSA</td>
         <td>&radic;</td>
         <td>IDEA CBC</td>
-        <td>&nbsp;</td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -113,7 +113,7 @@
         <td>DHE-PSK(forward secrecy)</td>
         <td>&radic;</td>
         <td>DES CBC</td>
-        <td>&nbsp;</td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -121,7 +121,7 @@
         <td>ECDHE-PSK(forward secrecy)</td>
         <td>&radic;</td>
         <td>RC2 CBC</td>
-        <td>&nbsp;</td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -137,15 +137,15 @@
         <td>SRP-DSS</td>
         <td>&radic;</td>
         <td>RC4</td>
-        <td>&nbsp;</td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
         <td>SRP-RSA</td>
         <td>&radic;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
+        <td><i>null</i></td>
+        <td>Insecure &radic;</td>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
@@ -183,8 +183,9 @@
     </tr>
 </table>
 
-<br/>
+<br />
 <h4 id="tls1.1"><strong>TLS 1.1</strong></h4>
+
 <table border="1" style="margin:auto;width:100%">
     <tr>
         <th colspan="2" style="text-align:center;width:33%">Key Exchange</th>
@@ -193,19 +194,507 @@
     </tr>
 
     <tr>
-        <td>RSA</td>
+        <td style="width:23%">RSA</td>
+        <td style="width:10%">&radic;</td>
+        <td style="width:23%">AES GCM</td>
+        <td style="width:10%">&nbsp;</td>
+        <td style="width:23%">HMAC-MD5</td>
+        <td style="width:10%">&radic;</td>
+    </tr>
+    <tr>
+        <td>DH-RSA</td>
+        <td>&radic;</td>
+        <td>AES CCM</td>
         <td>&nbsp;</td>
-        <td>AES</td>
+        <td>HMAC-SHA1</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DHE-RSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>AES CBC</td>
         <td>&nbsp;</td>
-        <td>HMAC-MD5</td>
+        <td>HMAC-SHA256/384</td>
         <td>&nbsp;</td>
     </tr>
     <tr>
-        <td>RSA</td>
+        <td>ECDH-RSA</td>
+        <td>&radic;</td>
+        <td>Camellia GCM</td>
         <td>&nbsp;</td>
-        <td>AES</td>
+        <td>AEAD</td>
         <td>&nbsp;</td>
-        <td>HMAC-MD5</td>
+    </tr>
+    <tr>
+        <td>ECDH-RSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>Camellia CBC</td>
+        <td>&nbsp;</td>
+        <td>GOST 28147-89 IMIT</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DH-DSS</td>
+        <td>&radic;</td>
+        <td>ARIA GCM</td>
+        <td>&nbsp;</td>
+        <td>GOST R34.11-94</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DHE-DSS(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>ARIA CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-ECDSA</td>
+        <td>&radic;</td>
+        <td>SEED CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDHE-ECDSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>3DES EDE CBC</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PSK</td>
+        <td>&radic;</td>
+        <td>GOST 28147-89 CNT</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PSK-RSA</td>
+        <td>&radic;</td>
+        <td>IDEA CBC</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DHE-PSK(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>DES CBC (56)</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDHE-PSK(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>RC2 CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP</td>
+        <td>&radic;</td>
+        <td>ChaCha20-Poly1305</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP-DSS</td>
+        <td>&radic;</td>
+        <td>RC4 (128)</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP-RSA</td>
+        <td>&radic;</td>
+        <td><i>null</i></td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Kerberos</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DH-ANON(insecure)</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-ANON(insecure)</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>GOSTR 34.10-94/34.10-2001</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+<br />
+<h4 id="tls1.2"><strong>TLS 1.2</strong></h4>
+
+<table border="1" style="margin:auto;width:100%">
+    <tr>
+        <th colspan="2" style="text-align:center;width:33%">Key Exchange</th>
+        <th colspan="2" style="text-align:center;width:33%">Encrypted Cipher</th>
+        <th colspan="2" style="text-align:center;width:33%">Integrity Assurance</th>
+    </tr>
+
+    <tr>
+        <td style="width:23%">RSA</td>
+        <td style="width:10%">&radic;</td>
+        <td style="width:23%">AES GCM</td>
+        <td style="width:10%">Secure &radic;</td>
+        <td style="width:23%">HMAC-MD5</td>
+        <td style="width:10%">&radic;</td>
+    </tr>
+    <tr>
+        <td>DH-RSA</td>
+        <td>&radic;</td>
+        <td>AES CCM</td>
+        <td>Secure &radic;</td>
+        <td>HMAC-SHA1</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DHE-RSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>AES CBC</td>
+        <td>&nbsp;</td>
+        <td>HMAC-SHA256/384</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>ECDH-RSA</td>
+        <td>&radic;</td>
+        <td>Camellia GCM</td>
+        <td>Secure &radic;</td>
+        <td>AEAD</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>ECDH-RSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>Camellia CBC</td>
+        <td>&nbsp;</td>
+        <td>GOST 28147-89 IMIT</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DH-DSS</td>
+        <td>&radic;</td>
+        <td>ARIA GCM</td>
+        <td>Secure &radic;</td>
+        <td>GOST R34.11-94</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>DHE-DSS(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>ARIA CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-ECDSA</td>
+        <td>&radic;</td>
+        <td>SEED CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDHE-ECDSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>3DES EDE CBC</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PSK</td>
+        <td>&radic;</td>
+        <td>GOST 28147-89 CNT</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PSK-RSA</td>
+        <td>&radic;</td>
+        <td>IDEA CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DHE-PSK(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>DES CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDHE-PSK(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>RC2 CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP</td>
+        <td>&radic;</td>
+        <td>ChaCha20-Poly1305</td>
+        <td>Secure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP-DSS</td>
+        <td>&radic;</td>
+        <td>RC4 (128)</td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP-RSA</td>
+        <td>&radic;</td>
+        <td><i>null</i></td>
+        <td>Insecure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Kerberos</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DH-ANON(insecure)</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-ANON(insecure)</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>GOSTR 34.10-94/34.10-2001</td>
+        <td>&radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+<br />
+<h4 id="tls1.3"><strong>TLS 1.3</strong></h4>
+
+<table border="1" style="margin:auto;width:100%">
+    <tr>
+        <th colspan="2" style="text-align:center;width:33%">Key Exchange</th>
+        <th colspan="2" style="text-align:center;width:33%">Encrypted Cipher</th>
+        <th colspan="2" style="text-align:center;width:33%">Integrity Assurance</th>
+    </tr>
+
+    <tr>
+        <td style="width:23%">RSA</td>
+        <td style="width:10%">&nbsp;</td>
+        <td style="width:23%">AES GCM</td>
+        <td style="width:10%">Secure &radic;</td>
+        <td style="width:23%">HMAC-MD5</td>
+        <td style="width:10%">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DH-RSA</td>
+        <td>&nbsp;</td>
+        <td>AES CCM</td>
+        <td>Secure &radic;</td>
+        <td>HMAC-SHA1</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DHE-RSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>AES CBC</td>
+        <td>&nbsp;</td>
+        <td>HMAC-SHA256/384</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-RSA</td>
+        <td>&nbsp;</td>
+        <td>Camellia GCM</td>
+        <td>&nbsp;</td>
+        <td>AEAD</td>
+        <td>&radic;</td>
+    </tr>
+    <tr>
+        <td>ECDH-RSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>Camellia CBC</td>
+        <td>&nbsp;</td>
+        <td>GOST 28147-89 IMIT</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DH-DSS</td>
+        <td>&nbsp;</td>
+        <td>ARIA GCM</td>
+        <td>&nbsp;</td>
+        <td>GOST R34.11-94</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DHE-DSS(forward secrecy)</td>
+        <td>&nbsp;</td>
+        <td>ARIA CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-ECDSA</td>
+        <td>&nbsp;</td>
+        <td>SEED CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDHE-ECDSA(forward secrecy)</td>
+        <td>&radic;</td>
+        <td>3DES EDE CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PSK</td>
+        <td>&nbsp;</td>
+        <td>GOST 28147-89 CNT</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>PSK-RSA</td>
+        <td>&nbsp;</td>
+        <td>IDEA CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DHE-PSK(forward secrecy)</td>
+        <td>&nbsp;</td>
+        <td>DES CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDHE-PSK(forward secrecy)</td>
+        <td>&nbsp;</td>
+        <td>RC2 CBC</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP</td>
+        <td>&nbsp;</td>
+        <td>ChaCha20-Poly1305</td>
+        <td>Secure &radic;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP-DSS</td>
+        <td>&nbsp;</td>
+        <td>RC4</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>SRP-RSA</td>
+        <td>&nbsp;</td>
+        <td><i>null</i></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>Kerberos</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>DH-ANON(insecure)</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>ECDH-ANON(insecure)</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>GOSTR 34.10-94/34.10-2001</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
         <td>&nbsp;</td>
     </tr>
 </table>
