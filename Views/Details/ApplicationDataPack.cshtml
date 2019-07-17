@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+    <style>
+        #WF {
+            font-size: 14px;
+            font-weight: bold; /*字体粗细*/
+            background-color: #E1FCE0;
+            color: black;
+        }
+    </style>
+
+<h3 style="text-align:center"><strong>Application Data Packaging</strong></h3>
+<h4 style="text-align:center"><i>Based on the TLS Record protocol</i></h4>
+
+<body>
+    <div>
+        <p>
+            After application layer packs its data, the data is then compressed and calculated the Message Authentication Code (MAC) attached to itself. Then, use the symmetric key to encrypt. At last, add the SSL header to it and it's all done.
+        </p>
+        <br />
+        <img src="~/images/RecordProtocol.jpg" alt="Record Protocol" usemap="#furtherdetails" style="width:40%;height:40%;" />
+        <br />
+        <p>
+            The SSL header is composed of three parts: type, version (major & Minor version) and Length.
+        </p>
+        <br />
+        <img src="~/images/header.jpg" alt="Package format" style="width:40%;height:40%;" />
+        <br />
+        <p>
+            After the TLS pack the data, it converts the results data to the transport layer for further package, such as TCP/UDP.
+        </p>
+    </div>
+    
+    <div>
+        <a href="/Details/Index">
+            <strong>
+                &larr; Back to the handshake process
+            </strong>
+        </a>
+    </div>
+</body>
+
+
+
+
+

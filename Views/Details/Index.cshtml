@@ -5,7 +5,14 @@
     ViewData["title"] = "index";
 }
 
-
+<style>
+    #WF{
+        font-size: 14px;
+        font-weight: bold;/*字体粗细*/
+        background-color:white;
+        color:black;
+    }
+</style>
 
 <div class="parent">
     <div class="content" style="width:50%;float:left">
@@ -13,23 +20,36 @@
         <map name="furtherdetails" id="furtherdetails"></map>
     </div>
     <div class="content" style="width:50%;float:left;height:auto">
-        <h3><strong>Handshake</strong></h3>
+
+        <h4>
+            <i>
+                The communication using TLS can be divided into two parts: Handshake process and Application Data Exchange process.
+            </i>
+        </h4>
+
+        <br />
+
+        <h3><strong>Handshake</strong></h3> 
+        <h4>TLS Handshake protocol on the application layer</h4>
         <!--
     <h4><a asp-controller="Details" asp-action="Clienthello" target="contentdisplayer">Client Hello</a></h4>
     <iframe name="contentdisplayer" style="height:200%"></iframe>
                 -->
-        <h4><a asp-controller="Details" asp-action="Clienthello">Client Hello</a></h4>
+        <ul>
+            <li><a asp-controller="Details" asp-action="Clienthello">Client Hello</a></li>
 
-        <h4><a asp-controller="Details" asp-action="Serverhello">Server Hello</a></h4>
-        <h4><a asp-controller="Details" asp-action="Servercert">Server Key Exchange & cert</a></h4>
-        <h4><a asp-controller="Details" asp-action="Clientbye">Client-change cipher spec & Client Key Exchange</a></h4>
-        <h4><a asp-controller="Details" asp-action="Serverbye">Server-change cipher spec</a></h4>
+            <li><a asp-controller="Details" asp-action="Serverhello">Server Hello</a></li>
+            <li><a asp-controller="Details" asp-action="Servercert">Server Key Exchange & cert</a></li>
+            <li><a asp-controller="Details" asp-action="Clientbye">Client-change cipher spec & Client Key Exchange</a></li>
+            <li><a asp-controller="Details" asp-action="Serverbye">Server-change cipher spec</a></li>
+        </ul>
+        
 
 
         <p>
             At this point, the "handshake" is complete and the application protocol is enabled, with content type of 23. Application messages exchanged between client and server will also be authenticated and optionally encrypted exactly like in their Finished message. Otherwise, the content type will return 25 and the client will not authenticate.
         </p>
-        <a asp-controller="Details" asp-action="ApplicationDataExchange">Learn more about <strong>Application Data Exchange</strong></a>
+        <a asp-controller="Details" asp-action="ApplicationDataPack">Learn more about <strong>How to pack application layer data</strong></a>
         <p>
             <a href="/Home/Example">&rArr; For a more detailed example.</a>
         </p>

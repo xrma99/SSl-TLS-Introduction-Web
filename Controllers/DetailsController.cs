@@ -37,7 +37,7 @@ namespace SSLTLSWeb.Controllers
         {
             return View();
         }
-        public IActionResult ApplicationDataExchange()
+        public IActionResult ApplicationDataPack()
         {
             return View();
         }

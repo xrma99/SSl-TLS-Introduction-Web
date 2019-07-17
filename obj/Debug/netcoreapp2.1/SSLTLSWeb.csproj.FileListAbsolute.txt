@@ -37,7 +37,7 @@ C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Deta
 C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Details\Serverhello.g.cshtml.cs
 C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Details\Clientbye.g.cshtml.cs
 C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Details\Serverbye.g.cshtml.cs
-C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Details\ApplicationDataExchange.g.cshtml.cs
-C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\tls\algorithm.g.cshtml.cs
 C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\Example.g.cshtml.cs
 C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Details\Servercert.g.cshtml.cs
+C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Details\ApplicationDataPack.g.cshtml.cs
+C:\Users\t-xinma\source\repos\SSLTLSWeb\obj\Debug\netcoreapp2.1\Razor\Views\Home\algorithm.g.cshtml.cs

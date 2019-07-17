@@ -34,6 +34,11 @@ namespace SSLTLSWeb.Controllers
             return View();
         }
 
+        public IActionResult Algorithm()
+        {
+            return View();
+        }
+
         public IActionResult Example()
         {
             return View();
